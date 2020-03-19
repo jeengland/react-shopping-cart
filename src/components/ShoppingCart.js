@@ -16,8 +16,8 @@ const ShoppingCart = () => {
 	const { cart } = useContext(CartContext);
 	return (
 		<div className="shopping-cart">
-			{cart.map(item => (
-				<Item key={item.id} {...item} />
+			{cart.map((item, index) => (
+				<Item key={`${item.id} ${index}`} {...item} />
 			))}
 
 			<div className="shopping-cart__checkout">

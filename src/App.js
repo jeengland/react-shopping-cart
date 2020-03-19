@@ -21,7 +21,7 @@ function App() {
 
 	const removeItem = (id) => {
 		let tot = 0;
-		const newCart = []
+		const newCart = [];
 		cart.forEach((item) => {
 			if (item.id === id && tot === 0) {
 				tot++;
