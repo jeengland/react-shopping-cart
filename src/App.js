@@ -20,7 +20,17 @@ function App() {
 	};
 
 	const removeItem = (id) => {
-		setCart(cart.filter((product) => product.id !== id));
+		let tot = 0;
+		const newCart = []
+		cart.forEach((item) => {
+			if (item.id === id && tot === 0) {
+				tot++;
+				
+			} else {
+				newCart.push(item);
+			}
+		})
+		setCart(newCart);
 	};
 
 	return (
